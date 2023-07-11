@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./search.css";
-import SearchIcon from "@mui/icons-material/Search";
-import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
+
 import { useNavigate } from "react-router-dom";
+import SearchBar from "../SearchBar/SearchBar";
 export default function Search() {
   const [searchInput, setSearchInput] = useState("");
   const navigate=useNavigate()
@@ -22,21 +22,7 @@ navigate(`/search?query=${searchInput}`)
       >
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
       </div>
-      <div className=" d-flex justify-content-center align-items-center">
-        <div>
-          <form className="mt-4" onSubmit={formSubmit}>
-            <SearchIcon />
-            <input
-              onChange={inputChange}
-              value={searchInput}
-              type="text"
-              className="text"
-              style={{ borderRadius: "50px", width: "300px", height: "40px" }}
-            />
-            <KeyboardVoiceIcon />
-          </form>
-        </div>
-      </div>
+      <SearchBar inputChange={inputChange} formSubmit={formSubmit} searchInput={searchInput}/>
     </>
   );
 }
