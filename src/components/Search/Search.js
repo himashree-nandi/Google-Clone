@@ -18,7 +18,7 @@ export default function Search() {
     <div>
       <div
         className="justify-content-center align-items-center d-flex"
-        style={{ marginTop: "150px" }}
+        style={{ marginTop: "120px" }}
       >
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
       </div>
