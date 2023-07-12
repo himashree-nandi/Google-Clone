@@ -6,8 +6,8 @@ export default function SearchResults({results}) {
   return (
     <div>
         {
-            results.items.map((item)=>{
-                return <DisplayResult item={item}/>
+            results.items.map((item,index)=>{
+                return <DisplayResult item={item} key={index}/>
             })
         }
     </div>

@@ -3,7 +3,6 @@ import "./search.css";
 
 import { Link, useNavigate } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
-import { Button } from "react-bootstrap";
 export default function Search() {
   const [searchInput, setSearchInput] = useState("");
   const navigate = useNavigate();
@@ -32,7 +31,13 @@ export default function Search() {
       </div>
       <div className="justify-content-center align-items-center d-flex m-4">
         <input className="m-3 px-3" type="submit" value="Google Search" />
-        <Link to="https://www.google.com/doodles"><input className=" m-3 px-3" type="submit" value="I'm Feeling Lucky" /></Link>
+        <Link to="https://www.google.com/doodles">
+          <input
+            className=" m-3 px-3"
+            type="submit"
+            value="I'm Feeling Lucky"
+          />
+        </Link>
       </div>
     </div>
   );
