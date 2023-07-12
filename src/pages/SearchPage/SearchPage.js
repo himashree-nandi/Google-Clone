@@ -3,16 +3,17 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import { useLocation } from "react-router-dom";
 import { getApi } from "../../api/googleSearchApi";
 import { Spinner } from "react-bootstrap";
+import SearchResults from "../../components/SearchResults/SearchResults";
+
 export default function SearchPage() {
-  const [results, setResults] = useState("");
+  const [results, setResults] = useState(null);
   const location = useLocation();
   // console.log(location.search)
   const searchInput = new URLSearchParams(location.search).get("query");
   // console.log(searchInput)
   const getSearchResult = async () => {
     const results = await getApi(searchInput);
-    setResults(results.items);
-    console.log(results.items)
+    setResults(results);
   };
   useEffect(() => {
     getSearchResult();
@@ -25,7 +26,7 @@ export default function SearchPage() {
       <div><SearchBar searchInput={searchInput} /></div>
       <div className="mt-3">
         {!results && <Spinner />}
-        {results && ""}
+        {results && <SearchResults results={results}/>}
       </div>
       </div>
   );

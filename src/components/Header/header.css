@@ -1,4 +1,12 @@
 .m-2{
     text-decoration: none;
     color: black;
+    cursor: pointer;
+}
+.icon:hover{
+    color: rgb(19, 54, 255);
+}
+.avatar:hover{
+    cursor: pointer;
+    color: black;
 }

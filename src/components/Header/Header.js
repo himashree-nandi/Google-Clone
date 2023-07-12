@@ -7,14 +7,14 @@ export default function Header() {
   return (
       <div className=" d-flex justify-content-between px-6 " style={{padding:"20px",fontSize:"20px",flex:2}}>
         <div className=" d-flex" >
-          <Link className="m-2 " > About</Link>
-          <Link className="m-2 " >Store</Link>
+          <Link className="m-2 icon" > About</Link>
+          <Link className="m-2 icon" >Store</Link>
         </div>
         <div className=" d-flex  justify-content-end" >
-          <Link className="m-2 " >Gmail</Link>
-          <Link className="m-2 ">Images</Link>
+          <Link className="m-2 icon" >Gmail</Link>
+          <Link className="m-2 icon" to="https://www.google.com/imghp?hl=en&tab=ri&authuser=0&ogbl">Images</Link>
           <AppsIcon className="m-2"/>
-          <Avatar alt="Remy Sharp" src="https://lh3.googleusercontent.com/a/AAcHTtdd2wEIOEcGPPHSCPvlxcJ38NojtTuHrgpTr8gklJ8nKIE=s96-c-rg-br100"/>
+          <Avatar alt="Remy Sharp" src="" className="avatar"/>
         </div>
       </div>
   );
